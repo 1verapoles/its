@@ -35,7 +35,7 @@ try {
     $mail->setFrom('verapoles12345@gmail.com', 'Вера Полещук'); // Адрес самой почты и имя отправителя
 
     // Получатель письма
-    $mail->addAddress(' info@itspro.by');  
+    $mail->addAddress('info@itspro.by');  
     $mail->addAddress($email); // Ещё один, если нужен
 
    // Отправка сообщения
