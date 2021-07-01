@@ -1,0 +1,106 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>ITSPRO</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+      integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="assets/css/fc.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <h1 class="text-center">Календарь бронирования апартаментов</h1>
+          <h3 class="text-center">Для бронирования нажмите на дату заезда и заполните форму</h3>
+          <div id="calendar"></div>
+        </div>
+      </div>
+    </div>
+   
+
+    <div class="modal" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Бронирование апартаментов</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <form method="POST" action="send.php" class="form">
+              <div class="form-group">
+                <label for="name">Имя</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="form-group">
+                <label for="surname">Фамилия</label>
+                <input type="text" class="form-control" id="surname" name="surname" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+              </div>
+              <div class="form-group">
+                <label for="date">Дата заезда</label>
+                <input type="date" class="form-control" id="date" name="date">
+              </div>
+              <div class="form-group">
+                <label for="days">Количество дней</label>
+                <input type="number" class="form-control" id="days" name="days" min="1" required>
+              </div>
+              <div class="form-group">
+                <label for="comin">Время заселения</label>
+                <select class="form-control" id="comin" name="comin">
+                  <option>10.00</option>
+                  <option>12.00</option>
+                  <option>14.00</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <button type="submit" class="btn btn-primary mb-2">Забронировать</button>
+              </div>
+              <div class="form-group">
+                <label for="cost">Стоимость бронирования</label>
+                <input type="text" class="form-control result1" id="cost" name="cost">
+              </div>
+            </form>
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+    crossorigin="anonymous"
+  ></script>
+    <script src="assets/js/fc.min.js"></script>
+    <script src="assets/js/ru.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
